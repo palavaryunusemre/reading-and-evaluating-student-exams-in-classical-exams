@@ -8,7 +8,6 @@
 
 #### PANDEMİ DÖNEMİNDE UZAKTAN SENKRON- ASENKRON YÜRÜTÜLEN DERSLERDE KLASİK SINAVLARDA ÖĞRENCİ SINAVLARININ OKUNMASI VE DEĞERLENDİRİLMESİ 
 
-
 OCAK 2021 
 
 İÇİNDEKİLER DİZİNİ
@@ -100,7 +99,7 @@ Bu yapı python ile excel, csv formatlı dosyalardan içeri veri aktarılması i
 
 Bu makalede ele alınan proje için 10 öğrencinin 10 soru için cevaplarından oluşan bir dataset kullanılmıştır.
 
-
+![](https://i.hizliresim.com/nykc2lz.png)
 Şekil 1:Dataset
 
 **2.2.2. Database**
@@ -108,7 +107,7 @@ Bu makalede ele alınan proje için 10 öğrencinin 10 soru için cevaplarından
 Bu makalede ele alınan proje için hazırlanan database içeriği yetkili eğitim görevlisinin verdiği bilgiler ışığında hazırlanmıştır. Database 10 soru için öğrencilerin cevaplarının değerlendirme kriteri olacak keyword’lerden oluşmaktadır. Her soru için 5 adet keyword bulunmaktadır. Her keyword için bir adet prekeyword ve suffix keyword değeri bulunmaktadır.
 
  
-
+![](https://i.hizliresim.com/qaoiy2q.png)
 Şekil 2:Database
 
 **2.2.3. Metot**
@@ -118,25 +117,25 @@ Makalede ele alınan projenin blok şeması şekil-5’te gösterilmektedir. Pro
 Dataset veri okuma işlemi öğrencilerin sorulara ait cevapların bir diziye alınmasıdır. Her soru için öğrenci cevapları birer diziye alınır. Bu dizilerdeki her bir indeksteki verilere veri önişleme işlemleri yapılır.
 
  
-
+![](https://i.hizliresim.com/t3wm3ev.png)
 Şekil 3:Her Öğrencinin 1 Soru İçin Cevapları
 
 Her öğrencinin cevabı veri ön işleme işlemlerinden sonra bir diziye atılır (Şekil-3). Sonra her öğrencinin cevapları cümlelere ayrılarak her biri bir diziye atılır (Şekil-4). Öğrenci cevapları python split metodu kullanılarak cümlelere ayrıştırılır.
 
  
-
+![](https://i.hizliresim.com/kptiqqb.png)
 Şekil 4:Bir Öğrencinin Bir Soru İçin Cevabının Cümlelere Bölünmesi
 
 Veri önişleme aşamasında yapılan işlemler sırasıyla noktalama işaretlerini, sayıları ve özel karakterleri, alfabe boşlukları hariç her şeyin yerini alacak olan regex replace'i (“[^ a-zA-Z #]”, ”“) tek adımda kaldırmak, ardından genellikle yararlı bilgiler içermediğinden daha kısa kelimeleri kaldırmak, son olarak, büyük / küçük harf duyarlılığını geçersiz kılmak için tüm metni küçük harfe çevirmektir.
  
  
-
+![](https://i.hizliresim.com/rrtgonk.jpg)
 Şekil 5:Blok Şema
 
 Bu çalışmada sorumlu eğitim görevlisi tarafından hazırlanan database doğrultusunda öğrencilerin cevaplarından oluşan dataset içerisindeki her hücre verisi taranmıştır. Bu tarama işlemi şekil 6’da akış diyagramı verilen search algoritması tarafından gerçekleştirilmiştir.
 
  
-
+![](https://i.hizliresim.com/gamgon5.jpg)
 Şekil 6:Search Algoritması Akış Diyagramı
 
 Search algoritması her öğrencinin bir adet soru için cevaplarının ilk olarak bir diziye atılması işlemiyle başlar. Her cevap cümlelere ayrıştırılarak yeni dizilere atılır. İç içe dizi yapısı oluşturulur. Öğrencilerin cevaplarının cümlelere ayrıştırılmış hallerinin bulunduğu dizi içerisinde her cümle için keyword parametresi aranır. Keyword parametresinin bulunduğu her cümle için prekeyword parametresi aranır. Keyword ve prekeyword parametrelerinin bulunduğu cümle için suffix keyword parametresi aranır. Bir öğrenci için bu üç koşulu sağlayan başka cümle olup olmadığı kontrol edilir. Öğrenci başka bir cümlede aynı koşulları sağladı ise öğrencinin ilk koşulu sağlayan cümlesi dışındaki bütün koşulu sağlayan diğer cümleler es geçilir. Böylelikle bir öğrencinin bu koşulları tekrar etmesinin önüne geçilir. Öğrenci koşulu sağlar ise puanı bir artırılır.
@@ -144,17 +143,17 @@ Search algoritması her öğrencinin bir adet soru için cevaplarının ilk olar
 Search algoritması sonucunda öğrencilerin koşulları sağlayan maksimum bir cümlesi diziye atılmıştır. Bu cümlelere ait indeks değeri yeni bir diziye atılır. Koşulları sağlayan cümlelere ait öğrencilerin puanları bir artırılır. Öğrencilerin puanları cevap excel’in de ilgili hücrelere yazılır(şekil-7).
 
  
-
+![](https://i.hizliresim.com/43zpiv6.png)
 Şekil 7:Cevapların Bulunduğu Ansvers Excel Dosyası
 
 Ansver excel oluşturma işlemi program tarafından gerçekleştirilmektedir. Öğrenci no ve id sütunları datasetten çekilmektedir. (Şekil-8, Şekil-9)
 
  
-
+![](https://i.hizliresim.com/a6zrbc6.png)
 Şekil 8:Öğrenci İd'leri
 
  
-
+![](https://i.hizliresim.com/17myx9l.png)
 Şekil 9:Öğrenci Numaraları
 
  
