@@ -24,7 +24,7 @@ OCAK 2021
 - 2.2.1. Dataset
 - 2.2.2. Database
 - 2.2.3. Metot
-- SONUÇ	15
+- SONUÇ
  
 ŞEKİLLER DİZİNİ
 
