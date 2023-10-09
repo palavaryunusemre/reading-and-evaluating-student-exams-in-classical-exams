@@ -1,67 +1,55 @@
-# bitirme_tezi
+# DÜZCE ÜNİVERSİTESİ TEKNOLOJİ FAKÜLTESİ
+## BİLGİSAYAR MÜHENDİSLİĞİ BİTİRME TEZİ PROJE RAPORU
 
-DÜZCE ÜNİVERSİTESİ TEKNOLOJİ FAKÜLTESİ
-BİLGİSAYAR MÜHENDİSLİĞİ BİTİRME TEZİ PROJE RAPORU
+### YUNUS EMRE PALAVAR
 
-172113066 YUNUS EMRE PALAVAR
 
-PANDEMİ DÖNEMİNDE UZAKTAN SENKRON- ASENKRON YÜRÜTÜLEN DERSLERDE KLASİK SINAVLARDA ÖĞRENCİ SINAVLARININ OKUNMASI VE DEĞERLENDİRİLMESİ 
+
+
+#### PANDEMİ DÖNEMİNDE UZAKTAN SENKRON- ASENKRON YÜRÜTÜLEN DERSLERDE KLASİK SINAVLARDA ÖĞRENCİ SINAVLARININ OKUNMASI VE DEĞERLENDİRİLMESİ 
 
 
 OCAK 2021 
+
 İÇİNDEKİLER DİZİNİ
-
-İÇİNDEKİLER DİZİNİ	2
-ŞEKİLLER DİZİNİ	3
-BÖLÜM 1	4
-GİRİŞ	4
-BÖLÜM 2	5
-2.1. Python Teknolojileri	5
-2.1.1. Python	5
-2.1.2. Spyder	6
-2.1.3 Pandas kütüphanesi	6
-2.1.4. Dataframe	7
-2.1.5 Xlsxwriter kütüphanesi	7
-2.1.6. Openpyxl	7
-2.2. Materyal ve Metot	7
-2.2.1. Dataset	7
-2.2.2. Database	8
-2.2.3. Metot	9
-BÖLÜM 3	15
-SONUÇ	15
-
-	
-
+- Giriş
+- Kullanılan Teknolojiler
+- 2.1. Python Teknolojileri
+- 2.1.1. Python
+- 2.1.2. Spyder
+- 2.1.3 Pandas kütüphanesi
+- 2.1.4. Dataframe
+- 2.1.5 Xlsxwriter kütüphanesi
+- 2.1.6. Openpyxl
+- 2.2. Materyal ve Metot
+- 2.2.1. Dataset
+- 2.2.2. Database
+- 2.2.3. Metot
+- SONUÇ	15
  
 ŞEKİLLER DİZİNİ
 
-Şekil 1:Dataset	8
-Şekil 2:Database	9
-Şekil 3:Her Öğrencinin 1 Soru İçin Cevapları	10
-Şekil 4:Bir Öğrencinin Bir Soru İçin Cevabının Cümlelere Bölünmesi	11
-Şekil 5:Blok Şema	11
-Şekil 6:Search Algoritması Akış Diyagramı	12
-Şekil 7:Cevapların Bulunduğu Ansvers Excel Dosyası	13
-Şekil 8:Öğrenci İd'leri	14
-Şekil 9:Öğrenci Numaraları	14
+- Şekil 1:Dataset
+- Şekil 2:Database
+- Şekil 3:Her Öğrencinin 1 Soru İçin Cevapları
+- Şekil 4:Bir Öğrencinin Bir Soru İçin Cevabının Cümlelere Bölünmesi
+- Şekil 5:Blok Şema
+- Şekil 6:Search Algoritması Akış Diyagramı
+- Şekil 7:Cevapların Bulunduğu Ansvers Excel Dosyası
+- Şekil 8:Öğrenci İd'leri
+- Şekil 9:Öğrenci Numaraları
 
-
-
-	
-
- 
-BÖLÜM 1
-GİRİŞ
+**GİRİŞ**
 
 İçinde bulunulan covid-19 pandemi süreci dolayısıyla ülkemizde uzaktan eğitime geçiş yapıl-mıştır. Uzaktan eğitim süreci senkron veya asenkron olarak sürdürülmektedir. Öğrencilere yapılan dersler doğrultusunda değerlendirilmeleri için ödev verilmekte veya sınav yapılmaktadır. Bu süreçte sınavlar öğrencilere çevrimiçi veya çevrimdışı olarak sunulmaktadır. Bu makalede ele alınacak projede sınav ve ödev türü klasik hazırlanan açık uçlu cevaplar içeren soru şeklidir. Bu projede öğrencilere yapılan ödev veya sınavların okunmasına ve değerlendirilmesine yönelik bir çalışma yapılmıştır. Bu çalışma da günümüzde gelişen bilgisayar teknolojilerinden faydalanılarak insan iş yükünü hafifletmeyi ve daha tutarlı bir sistemle sınavların okunması amaçlanmıştır. Bu doğrultuda eğitim görevlisinden alınan veriler ile hazırlanan database programa entegre edilerek programın database temelli bir değerlendirme yapması sağlanmıştır. Database eklenen veriler eğitim görevlisi tarafından belirlenen sorulara yönelik cevapları oluşturacak anahtar kelime gruplarıdır. Program bu anahtar kelime gruplarını kullanarak öğrenci cevapları üzerinde arama işlemi yapmaktadır. Arama sonuçlarına göre öğrenci cevaplarının değerlendirmesini yapmaktadır.    
  
-BÖLÜM 2
+**KULLANILAN TEKNOLOJILER**
 
-2.1. Python Teknolojileri
+**2.1. Python Teknolojileri**
 
-Bu makalede ele alınacak olan çalışma python programlama dili ile yazılmıştır. Proje yazımında kullanılan derleyici Spyder programıdır. Çalışmada kullanılan python sürümü 3.7 dir. Python yapıları pandas, xlxswriter, dataframe ve openpyxl’ dir.
+Bu makalede ele alınacak olan çalışma python programlama dili ile yazılmıştır. Proje yazımında kullanılan derleyici Spyder programıdır. Çalışmada kullanılan python sürümü 3.7 dir. Python yapıları pandas, xlxswriter, dataframe ve openpyxl' dir.
 
-2.1.1. Python
+**2.1.1. Python**
 
 Python, nesne yönelimli, yorumlamalı, birimsel (modüler) ve etkileşimli yüksek seviyeli bir programlama dilidir. 
 
@@ -74,7 +62,7 @@ Python 2.x geliştirilme desteğinin sona ermesinin ardından, Python dilinin 3.
 
 Python'un son derece kolay okunabilir olması düşünülmüştür. Bu yüzden örneğin küme parantezleri yerine girintileme işlemi kullanılır. Hatta bazı durumlarda girintileme işlemine dahi gerek kalmadan kodun ilgili bölümü tek satırda yazılabilir. Böylece Python, program kodunuzu en az çaba ile ve hızlıca yazmanıza imkân tanır. Sade sözdizimi ile diğer programlama dillerinden üstündür.
 
-2.1.2. Spyder
+**2.1.2. Spyder**
 
 Spyder, Python dilinde bilimsel programlama için açık kaynaklı bir çapraz platform entegre geliştirme ortamıdır (IDE). Spyder, bilimsel Python yığınında NumPy, SciPy, Matplotlib, pandalar, IPython, SymPy ve Cython ve diğer açık kaynaklı yazılımlar dahil olmak üzere bir dizi önde gelen paketle entegre olur ve MIT lisansı altında piyasaya sürülür.
 
@@ -82,41 +70,40 @@ Spyder, Python dilinde bilimsel programlama için açık kaynaklı bir çapraz p
 
 Spyder, birinci ve üçüncü taraf eklentilerle genişletilebilir, veri incelemesi için etkileşimli araçlar için destek içerir ve Python'a özgü kod kalite güvencesi ve Pyflakes, Pylint ve Rope gibi iç gözlem araçlarını yerleştirir. Çapraz platform üzerinden Anaconda, Windows'ta, macOS'ta MacPorts üzerinden ve Arch Linux, Debian, Fedora, Gentoo Linux, openSUSE ve Ubuntu gibi büyük Linux dağıtımlarında kullanılabilir.
 
-2.1.3 Pandas kütüphanesi
+**2.1.3 Pandas kütüphanesi**
 
 Pandas, veri işlemesi ve analizi için Python programlama dilinde yazılmış olan bir yazılım kütüphanesidir. Bu kütüphane temel olarak zaman etiketli serileri ve sayısal tabloları işlemek için bir veri yapısı oluşturur ve bu şekilde çeşitli işlemler bu veri yapısı üzerinde gerçekleştirilebilir olur. Yazılım ücretsizdir ve bir çeşit BSD ile lisansına sahiptir. Yazılım ismini bir ekonometri terimi olan veri panelinden almıştır. Bir veri paneli birçok zaman aralığı içinde farklı gözlemlerin işlenebildiği yapıyı tarif eder.
 
-	import pandas as pd
+- import pandas as pd
 
-2.1.4. Dataframe
+**2.1.4. Dataframe**
 
 Pandas temel olarak makine öğrenmesi uygulamalarında kullanılmaktadır. Bu uygulamalarda en öne çıkan özelliği de veri isketleridir. Pandas ayrıca birçok farklı formattan (csv, excel gibi) veri içe aktarması gerçekleştirebilir. Pandas çok farklı veri işleme yöntemlerini uygulayabilir; örneğin gruplama, ekleme, birleştirme, kaynaştırma, bir araya getirme. Ayrıca bu kütüphane veri temizleme için veri doldurma, değiştirme ve varsayma özelliklerine de sahiptir.
 
-	news_df = pd.DataFrame({'document':ansvers_array_one})
+- news_df = pd.DataFrame({'document':ansvers_array_one})
 
-2.1.5 Xlsxwriter kütüphanesi
+**2.1.5 Xlsxwriter kütüphanesi**
 
 Python xlsxwriter kütüphanesi excel formatlı dosyalara veri aktarılması için kullanılır.
 
-	import xlsxwriter
+- import xlsxwriter
 
-2.1.6. Openpyxl
+**2.1.6. Openpyxl**
 
 Bu yapı python ile excel, csv formatlı dosyalardan içeri veri aktarılması için kullanılır.
 
-	from openpyxl import Workbook,load_workbook
+- from openpyxl import Workbook,load_workbook
 
-2.2. Materyal ve Metot
+**2.2. Materyal ve Metot**
 
-2.2.1. Dataset
+**2.2.1. Dataset**
 
 Bu makalede ele alınan proje için 10 öğrencinin 10 soru için cevaplarından oluşan bir dataset kullanılmıştır.
 
- 
 
 Şekil 1:Dataset
 
-2.2.2. Database
+**2.2.2. Database**
 
 Bu makalede ele alınan proje için hazırlanan database içeriği yetkili eğitim görevlisinin verdiği bilgiler ışığında hazırlanmıştır. Database 10 soru için öğrencilerin cevaplarının değerlendirme kriteri olacak keyword’lerden oluşmaktadır. Her soru için 5 adet keyword bulunmaktadır. Her keyword için bir adet prekeyword ve suffix keyword değeri bulunmaktadır.
 
@@ -124,7 +111,7 @@ Bu makalede ele alınan proje için hazırlanan database içeriği yetkili eğit
 
 Şekil 2:Database
 
-2.2.3. Metot
+**2.2.3. Metot**
 
 Makalede ele alınan projenin blok şeması şekil-5’te gösterilmektedir. Program çalıştırıldığında önceden hazırlanmış datasette ki verileri okur, sonra ki aşama da program datasette ki verilere veri önişleme işlemlerini uygular, akabinde databasede ki verilere dayanarak search algoritmasını çalıştırılır, search algoritması sonuçları bir diziye eklenir, son olarak dizideki veriler excel belgesine yazdırılır. 
 
@@ -171,8 +158,8 @@ Ansver excel oluşturma işlemi program tarafından gerçekleştirilmektedir. Ö
 Şekil 9:Öğrenci Numaraları
 
  
-BÖLÜM 3
-SONUÇ
+
+**SONUÇ**
 
 İçinde bulunulan Covid-19 pandemi süreci dolayısıyla eğitimin uzaktan senkron veya asenkron olarak sürdürülmesinin öğrenci performansı üzerinde etkileri vardır. Öğrenci performansı ölçüm aracı olarak verilen sınavlar veya ödevlerde öğrencilerin açık uçlu sorulara verdiği cevaplar irdelenmektedir. Bu cevaplar açık uçlu olduğunda sayfalarca doküman ortaya çıkmaktadır. İrdeleme sonucunda öğrencilerden istenilen cevapların verilip verilmediği adaletli ve tarafsız olarak değerlendirilmesi amaçlanmaktadır. Ortada ki insan faktörü ve doküman çokluğundan dolayı bu değerlendirme her zaman yüzde yüz doğru bir sonuç vermemektedir. Bu projede aradaki insan faktörünü ortadan kaldıran bilgisayar teknolojileri kullanılarak bir değerlendirme aracı gerçekleştirilmiştir. Bu araç ile ders eğitim görevlisi tarafından verilen bilgiler ışığında hazırlanan database doğrultusunda sorulara verilen cevaplar irdelenmiş ve değerlendirilmiştir. Bu proje sonucunda insan faktörünün ortadan kaldırılması ile hata payı minimize edilmiştir. Bilgisayar teknolojilerinin kullanılması ile insan iş yükü hafifletilmiş ve zaman kazanımı sağlanmıştır. 
 
