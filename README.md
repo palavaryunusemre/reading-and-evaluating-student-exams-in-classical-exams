@@ -108,6 +108,7 @@ Bu makalede ele alınan proje için hazırlanan database içeriği yetkili eğit
 
  
 ![](https://i.hizliresim.com/qaoiy2q.png)
+
 Şekil 2:Database
 
 **2.2.3. Metot**
